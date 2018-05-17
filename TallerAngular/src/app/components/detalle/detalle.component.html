@@ -2,9 +2,7 @@
   <mat-progress-bar mode="indeterminate"></mat-progress-bar>
 </div>
 <h1 *ngIf="noticia"></h1>
-<mat-card-header>
-  <img id="imagen"  class="img-responsive" src={{noticia.urlToImage}} alt="Photo of a Shiba Inu">
-</mat-card-header>
+  <img mat-card-mat-image class="img-rounded img-responsive" src={{noticia.urlToImage}} alt="Photo of a Shiba Inu">
 <mat-card-content>
   <h4>{{noticia.descripcion}}</h4>
   <h1>{{noticia.titulo}}</h1>

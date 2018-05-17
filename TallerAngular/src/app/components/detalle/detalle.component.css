@@ -1,11 +1,9 @@
-#imagen{
- /* margin-top: 10px;
-!*  display: block;*!
-!*  margin-left: auto;
-  margin-right: auto;*!
-  padding-bottom: 5px;*/
-  width: 600px;
-  height: 300px;
+img{
+  margin-top: 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 5px;
 }
 #url{
   padding-top: 10px;
