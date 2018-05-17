@@ -27,8 +27,9 @@ export class DetalleComponent implements OnInit {
 
       this._noticiasService.getNoticia(id).subscribe(
         response => {
-          this.noticia = response;
-          console.log(this.noticia.toString());
+          this.noticia = response[0];
+          console.log(this.noticia);
+
           // this._router.navigate(['/productos']);
         },
         error => {
