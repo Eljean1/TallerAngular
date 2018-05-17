@@ -1,12 +1,17 @@
 <div *ngIf="!noticia">
   <mat-progress-bar mode="indeterminate"></mat-progress-bar>
 </div>
-<h1 *ngIf="noticia">{{noticia.id}}</h1>
+<h1 *ngIf="noticia"></h1>
 <mat-card-header>
-  <img mat-card-mat-image src={{noticia.urlToImage}} alt="Photo of a Shiba Inu">
-  <h1>{{noticia.title}}</h1>
+  <img id="imagen"  class="img-responsive" src={{noticia.urlToImage}} alt="Photo of a Shiba Inu">
 </mat-card-header>
 <mat-card-content>
-  <h2>{{noticia.texto}}</h2>
+  <h4>{{noticia.descripcion}}</h4>
+  <h1>{{noticia.titulo}}</h1>
+  <p>{{noticia.texto}}</p>
+  <a id="url" href={{noticia.url}}>{{noticia.url}}</a>
+  <p id="volver">
+    <button mat-raised-button color="warn" [routerLink]="['/']"> Volver a Listado</button>
+  </p>
 </mat-card-content>
 
