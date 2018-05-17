@@ -1,5 +1,5 @@
 <p>
-  <button mat-raised-button color="warn" [routerLink]="['/']"> Volver</button>
+  <button mat-raised-button color="warn" [routerLink]="['/']"> Volver a Listado</button>
 </p>
 <div *ngIf="!favoritos">
   <mat-progress-bar mode="indeterminate"></mat-progress-bar>
@@ -10,7 +10,7 @@
     <mat-card *ngIf="i<10" class="example-card col-lg-12">
       <div class="col-md-12">
         <div class="col-md-2 col-sm-12">
-          <img mat-card-mat-image src={{noticia.thumbnailUrl}} alt="Photo of a Shiba Inu">
+          <img mat-card-mat-image src={{noticia.urlToImage}} alt="Photo of a Shiba Inu">
         </div>
         <div class="col-md-10 col-sm-12">
           <mat-card-title>{{noticia.title}}</mat-card-title>
@@ -19,7 +19,7 @@
         </div>
         <div class="col-md-2 col-sm-12">
           <button mat-raised-button color="warn" [routerLink]="['/detalle-noticia', noticia.id]">Ver Noticia</button>
-          <button mat-raised-button id="favorito" color="warn" >Borrar Favoritos</button>
+          <button mat-raised-button id="favorito" color="warn" (click)="borrarFavorito(noticia)" >Borrar Favoritos</button>
         </div>
       </div>
     </mat-card>

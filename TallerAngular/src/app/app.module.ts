@@ -18,6 +18,9 @@ import {
 // Componentes
 import { HomeComponent } from './components/home/home.component';
 import { ErrorComponent } from './components/error/error.component';
+import { ListadoComponent } from './components/listado/listado.component';
+import { DetalleComponent } from './components/detalle/detalle.component';
+import { FavoritosComponent } from './components/favoritos/favoritos.component';
 
 // Importar rutas
 import {appRoutingProviders, routing} from './app.routing';
@@ -25,9 +28,6 @@ import {appRoutingProviders, routing} from './app.routing';
 // Servicios
 import {GlobalService} from './service/global.service';
 import {NoticiasService} from './service/noticias.service';
-import { ListadoComponent } from './components/listado/listado.component';
-import { DetalleComponent } from './components/detalle/detalle.component';
-import { FavoritosComponent } from './components/favoritos/favoritos.component';
 
 
 

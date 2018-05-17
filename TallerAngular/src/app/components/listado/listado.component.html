@@ -1,6 +1,3 @@
-<p>
-  <button mat-raised-button color="warn" [routerLink]="['/']"> Volver</button>
-</p>
 <div *ngIf="!noticias">
   <mat-progress-bar mode="indeterminate"></mat-progress-bar>
 </div>
@@ -18,7 +15,7 @@
         </div>
         <div class="col-md-2 col-sm-12">
           <button mat-raised-button color="warn" [routerLink]="['/detalle-noticia', noticia.id]">Ver Noticia</button>
-          <button mat-raised-button id="favorito" color="warn" ><i class="fas fa-star"></i></button>
+          <button mat-raised-button id="favorito" color="warn" (click)="agregarFavorito(noticia)"><i class="fas fa-star"></i></button>
         </div>
       </div>
     </mat-card>

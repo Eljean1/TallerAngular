@@ -13,6 +13,7 @@ import {toArray} from "rxjs/internal/operators";
 })
 export class ListadoComponent implements OnInit {
   public noticias = [];
+  public  favoritos = [];
   public articulo;
 
   constructor(
@@ -37,5 +38,8 @@ export class ListadoComponent implements OnInit {
       err => console.error(err),
       /*() => console.log(this.noticias.toString())*/
     );
+  }
+  agregarFavorito( noticia: Noticia) {
+    this.noticiaService.guardarFavorito(noticia);
   }
 }
