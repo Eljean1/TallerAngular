@@ -24,6 +24,7 @@ export class DetalleComponent implements OnInit {
   getProducto() {
     this._route.params.forEach((params: Params) => {
       const id = params['id'];
+
       this._noticiasService.getNoticia(id).subscribe(
         response => {
           this.noticia = response;

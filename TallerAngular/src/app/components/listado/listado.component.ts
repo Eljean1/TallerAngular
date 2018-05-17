@@ -3,6 +3,7 @@ import {Router, ActivatedRoute} from '@angular/router';
 import { NoticiasService } from '../../service/noticias.service';
 import { Noticia } from '../../models/noticia';
 import {subscribeToResult} from "rxjs/internal/util/subscribeToResult";
+import {toArray} from "rxjs/internal/operators";
 
 @Component({
   selector: 'app-listado',
@@ -13,7 +14,6 @@ import {subscribeToResult} from "rxjs/internal/util/subscribeToResult";
 export class ListadoComponent implements OnInit {
   public noticias = [];
   public articulo;
-  //public noticias1 : any[];
 
   constructor(
     private noticiaService: NoticiasService,
@@ -24,15 +24,18 @@ export class ListadoComponent implements OnInit {
     this.noticiaService.getNoticias().subscribe(
       result => {
         //Se tuvo que obtener del json solo los articles ya que el json completo se obtenia como un objeto
+
         this.articulo = result;
-        this.noticias = this.articulo.articles;
-
-        console.log(this.articulo.articles);
-
+        // console.log(this.articulo);
+        // this.articulo = this.articulo.response;
+        // console.log(this.articulo);
+        this.noticias = this.articulo;
+        console.log(this.noticias);
+        //console.log(this.noticias);
       },
 
       err => console.error(err),
-      () => console.log(this.noticias.toString())
+      /*() => console.log(this.noticias.toString())*/
     );
   }
 }
