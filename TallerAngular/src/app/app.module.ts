@@ -27,6 +27,7 @@ import {GlobalService} from './service/global.service';
 import {NoticiasService} from './service/noticias.service';
 import { ListadoComponent } from './components/listado/listado.component';
 import { DetalleComponent } from './components/detalle/detalle.component';
+import { FavoritosComponent } from './components/favoritos/favoritos.component';
 
 
 
@@ -37,6 +38,7 @@ import { DetalleComponent } from './components/detalle/detalle.component';
     ErrorComponent,
     ListadoComponent,
     DetalleComponent,
+    FavoritosComponent,
   ],
   imports: [
     BrowserModule,
