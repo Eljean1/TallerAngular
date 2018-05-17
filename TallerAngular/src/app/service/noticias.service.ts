@@ -3,7 +3,7 @@ import {HttpClient} from '@angular/common/http';
 import {GlobalService} from '../service/global.service';
 
 @Injectable()
-export class ObjetosService {
+export class NoticiasService {
   public url: string;
   constructor(
     public _http: HttpClient,
@@ -11,14 +11,13 @@ export class ObjetosService {
   ) {
     this.url = _url.getUrl();
   }
-  getObjetos() {
+  getNoticias() {
     console.log(this.url);
-    console.log(this.url);
-    return this._http.get(this.url + '/photos');
+    return this._http.get(this.url);
   }
-  getObjeto(id) {
+  getNoticia(id) {
     console.log(id);
-    return this._http.get(this.url + '/photos/' + id);
+    return this._http.get(this.url + id);
   }
 
 }

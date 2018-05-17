@@ -11,7 +11,7 @@ const appRoutes: Routes = [
   {path: '', component: HomeComponent},
   {path: 'home', component: HomeComponent},
   {path: 'listado', component: ListadoComponent},
-  {path: 'detalle-objeto/:id', component: DetalleComponent},
+  {path: 'detalle-noticia/:id', component: DetalleComponent},
   {path: '**', component: ErrorComponent},
 ];
 export const appRoutingProviders: any[] = [];

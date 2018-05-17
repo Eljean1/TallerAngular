@@ -1,18 +1,18 @@
 import { Component, OnInit } from '@angular/core';
 import {Router, ActivatedRoute, Params} from '@angular/router';
-import {ObjetosService} from '../../service/objetos.service';
-import {Objeto} from '../../models/objeto';
+import {NoticiasService} from '../../service/noticias.service';
+import {Noticia} from '../../models/noticia';
 
 @Component({
   selector: 'app-detalle',
   templateUrl: './detalle.component.html',
   styleUrls: ['./detalle.component.css'],
-  providers: [ObjetosService]
+  providers: [NoticiasService]
 })
 export class DetalleComponent implements OnInit {
-  public objeto: Objeto;
+  public noticia: Noticia;
   constructor(
-    private _objetosService: ObjetosService,
+    private _noticiasService: NoticiasService,
     private _route: ActivatedRoute,
     private _router: Router
   ) {
@@ -24,10 +24,10 @@ export class DetalleComponent implements OnInit {
   getProducto() {
     this._route.params.forEach((params: Params) => {
       const id = params['id'];
-      this._objetosService.getObjeto(id).subscribe(
+      this._noticiasService.getNoticia(id).subscribe(
         response => {
-          this.objeto = response;
-          console.log(this.objeto);
+          this.noticia = response;
+          console.log(this.noticia.toString());
           // this._router.navigate(['/productos']);
         },
         error => {

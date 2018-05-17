@@ -24,7 +24,7 @@ import {appRoutingProviders, routing} from './app.routing';
 
 // Servicios
 import {GlobalService} from './service/global.service';
-import {ObjetosService} from './service/objetos.service';
+import {NoticiasService} from './service/noticias.service';
 import { ListadoComponent } from './components/listado/listado.component';
 import { DetalleComponent } from './components/detalle/detalle.component';
 
@@ -60,7 +60,7 @@ import { DetalleComponent } from './components/detalle/detalle.component';
     MatGridListModule,
     routing
   ],
-  providers: [appRoutingProviders, GlobalService, ObjetosService],
+  providers: [appRoutingProviders, GlobalService, NoticiasService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
