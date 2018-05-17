@@ -7,7 +7,7 @@
 </div>
 <mat-grid-list cols="1" rowHeight="4:1" *ngIf="favoritos">
   <mat-grid-tile *ngFor="let noticia of favoritos; let i = index">
-    <mat-card *ngIf="i<10" class="example-card col-lg-12">
+    <mat-card class="example-card col-lg-12">
       <div class="col-md-12">
         <div class="col-md-2 col-sm-12">
           <img mat-card-mat-image src={{noticia.urlToImage}} alt="Photo of a Shiba Inu">
@@ -15,11 +15,10 @@
         <div class="col-md-10 col-sm-12">
           <mat-card-title>{{noticia.title}}</mat-card-title>
           <mat-card-subtitle>{{noticia.description}}</mat-card-subtitle>
-          {{noticia.url}}
         </div>
         <div class="col-md-2 col-sm-12">
           <button mat-raised-button color="warn" [routerLink]="['/detalle-noticia', noticia.id]">Ver Noticia</button>
-          <button mat-raised-button id="favorito" color="warn" (click)="borrarFavorito(noticia)" >Borrar Favoritos</button>
+          <button mat-raised-button id="favorito" color="warn" (click)="borrarFavorito(noticia)" >Borrar Favorito</button>
         </div>
       </div>
     </mat-card>

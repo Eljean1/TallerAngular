@@ -7,7 +7,7 @@ import {Noticia} from "../models/noticia";
 @Injectable()
 export class NoticiasService {
   public url: string;
-  public favoritos: Noticia[];
+  public favoritos = [];
 
   constructor(
     public _http: HttpClient,
@@ -31,7 +31,7 @@ export class NoticiasService {
     }
     return this.favoritos;
   }
-  guardarFavorito(favorito: Noticia) {
+  guardarFavorito(favorito) {
     this.favoritos.unshift(favorito);
     let favoritos  = [];
     if (localStorage.getItem('favoritos') == null) {

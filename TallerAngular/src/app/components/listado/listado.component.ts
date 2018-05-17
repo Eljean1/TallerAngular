@@ -15,6 +15,7 @@ export class ListadoComponent implements OnInit {
   public noticias = [];
   public  favoritos = [];
   public articulo;
+  breakpoint: number;
 
   constructor(
     private noticiaService: NoticiasService,
@@ -38,8 +39,15 @@ export class ListadoComponent implements OnInit {
       err => console.error(err),
       /*() => console.log(this.noticias.toString())*/
     );
+
+    this.breakpoint = (window.innerWidth <= 400) ? 1 : 6;
   }
-  agregarFavorito( noticia: Noticia) {
+  agregarFavorito( noticia) {
     this.noticiaService.guardarFavorito(noticia);
   }
+
+  onResize(event) {
+    this.breakpoint = (event.target.innerWidth <= 400) ? 1 : 6;
+  }
+
 }
