@@ -1,23 +1,17 @@
 <div *ngIf="!noticias">
   <mat-progress-bar mode="indeterminate"></mat-progress-bar>
 </div>
-<mat-grid-list cols="1" rowHeight="4:1" *ngIf="noticias">
-  <mat-grid-tile *ngFor="let noticia of noticias; let i = index">
-    <mat-card *ngIf="i<10" class="example-card col-lg-12">
-      <div class="col-md-12">
-        <div class="col-md-2 col-sm-12">
-          <img mat-card-mat-image src={{noticia.urlToImage}} alt="Photo of a Shiba Inu">
-        </div>
-        <div class="col-md-10 col-sm-12">
-          <mat-card-title>{{noticia.title}}</mat-card-title>
-          <mat-card-subtitle>{{noticia.description}}</mat-card-subtitle>
-          {{noticia.url}}
-        </div>
-        <div class="col-md-2 col-sm-12">
-          <button mat-raised-button color="warn" [routerLink]="['/detalle-noticia', noticia.id]">Ver Noticia</button>
-          <button mat-raised-button id="favorito" color="warn" (click)="agregarFavorito(noticia)"><i class="fas fa-star"></i></button>
-        </div>
-      </div>
+<div fxLayout="column" fxLayoutAlign="center stretch" class="column-example">
+  <div *ngFor="let noticia of noticias; let i = index">
+    <mat-card>
+      <img mat-card-image src={{noticia.urlToImage}} alt="Photo of a Shiba Inu">
+      <mat-card-title>{{noticia.titulo}}</mat-card-title>
+      <mat-card-subtitle>{{noticia.descripcion}}</mat-card-subtitle>
+      <mat-card-actions>
+        <button mat-raised-button color="warn" [routerLink]="['/detalle-noticia', noticia.id]">Ver Noticia</button>
+        <button mat-raised-button id="favorito" color="warn" (click)="agregarFavorito(noticia)"><i class="fas fa-star"></i></button>
+      </mat-card-actions>
     </mat-card>
-  </mat-grid-tile>
-</mat-grid-list>
+  </div>
+</div>>
+

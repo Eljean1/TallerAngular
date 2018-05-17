@@ -1,31 +1,20 @@
 img{
-  margin-top: 10px;
-  display: block;
+  margin-top: auto;
+  display: flex;
   margin-left: auto;
   margin-right: auto;
   height: auto;
-  width: 150px;
-
+/*  width: auto;*/
 }
 button{
-  margin-top: auto;
+  margin-top: 15px;
   margin-bottom: 15px;
 }
 button #favorito{
-  margin: 0px;
+  margin: 1px;
 }
 mat-card{
-  text-align: left;
-}
-mat-grid-tile{
-  border-style: solid;
-  border-color: white;
-  border-radius: 2px;
+  text-align: center;
 }
 
-/*
-mat-card[_ngcontent-c0] {
-  max-width: 80%;
-  margin: 2em auto;
-  text-align: center;
-}*/
+
