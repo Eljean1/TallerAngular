@@ -16,7 +16,7 @@ export class NoticiasService {
     return this._http.get(this.url);
   }
   getNoticia(id) {
-    console.log(id);
+    console.log('Id de la noticia:' + id);
     return this._http.get(this.url + id);
   }
 

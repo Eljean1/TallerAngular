@@ -1,6 +1,6 @@
 export class Noticia {
   constructor(
-    id: number,
+    id: string,
     name: string,
     author: string,
     title: string,
