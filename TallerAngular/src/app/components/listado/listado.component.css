@@ -1,17 +1,27 @@
 img{
   margin-top: 10px;
-  display: block;
+/*  display: block;
   margin-left: auto;
-  margin-right: auto
+  margin-right: auto*/
 }
 button{
   margin-top: auto;
   margin-bottom: 15px;
 }
+button #favorito{
+  margin: 0px;
+}
 mat-card{
+  text-align: left;
 }
 mat-grid-tile{
   border-style: solid;
   border-color: white;
   border-radius: 2px;
 }
+/*
+mat-card[_ngcontent-c0] {
+  max-width: 80%;
+  margin: 2em auto;
+  text-align: center;
+}*/
