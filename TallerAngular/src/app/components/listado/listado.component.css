@@ -1,17 +1,23 @@
 img{
   margin-top: auto;
-  display: flex;
   margin-left: auto;
   margin-right: auto;
   height: auto;
+  max-width: 50%;
+  border-radius: 50%;
 /*  width: auto;*/
 }
 button{
   margin-top: 15px;
   margin-bottom: 15px;
+  max-width: 40%;
+  height: auto;
+}
+title{
+  text-align: center;
 }
 button #favorito{
-  margin: 1px;
+  margin: 5px;
 }
 mat-card{
   text-align: center;

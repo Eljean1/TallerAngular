@@ -1,17 +1,22 @@
 <div *ngIf="!noticias">
-  <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+  <mat-progress-bar mode="query"></mat-progress-bar>
 </div>
 <div fxLayout="column" fxLayoutAlign="center stretch" class="column-example">
   <div *ngFor="let noticia of noticias; let i = index">
     <mat-card>
       <img mat-card-image src={{noticia.urlToImage}} alt="Photo of a Shiba Inu">
-      <mat-card-title>{{noticia.titulo}}</mat-card-title>
-      <mat-card-subtitle>{{noticia.descripcion}}</mat-card-subtitle>
+
+        <mat-card-title>{{noticia.titulo}}</mat-card-title>
+        <mat-card-subtitle>{{noticia.descripcion}}</mat-card-subtitle>
+
+
       <mat-card-actions>
         <button mat-raised-button color="warn" [routerLink]="['/detalle-noticia', noticia.id]">Ver Noticia</button>
         <button mat-raised-button id="favorito" color="warn" (click)="agregarFavorito(noticia)"><i class="fas fa-star"></i></button>
       </mat-card-actions>
+
+      <mat-divider></mat-divider>
     </mat-card>
   </div>
-</div>>
+</div>
 

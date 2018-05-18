@@ -44,6 +44,7 @@ export class ListadoComponent implements OnInit {
   }
   agregarFavorito( noticia) {
     this.noticiaService.guardarFavorito(noticia);
+
   }
 
   onResize(event) {
