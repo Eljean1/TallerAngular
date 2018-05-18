@@ -60,7 +60,7 @@ import {NoticiasService} from './service/noticias.service';
     ReactiveFormsModule,
     MatTabsModule,
     MatGridListModule,
-    routing
+    routing,
   ],
   providers: [appRoutingProviders, GlobalService, NoticiasService],
   bootstrap: [AppComponent]
