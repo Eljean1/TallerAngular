@@ -1,7 +1,7 @@
 export class Noticia {
   constructor(
     id: string,
-    author: string,
+    autor: string,
     title: string,
     url: string,
     urlToImage: string,

@@ -8,6 +8,8 @@
   <h1>{{noticia.titulo}}</h1>
   <p>{{noticia.texto}}</p>
   <a id="url" href={{noticia.url}}>{{noticia.url}}</a>
+  <p><b><i>{{noticia.autor}} {{noticia.publishedAt}}</i></b></p>
+
   <p id="volver">
     <button mat-raised-button color="warn" [routerLink]="['/']"> Volver a Listado</button>
   </p>
